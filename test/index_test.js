@@ -6,12 +6,16 @@ describe('Test headers', function(){
     var headersObject = {'Content-Type':'application/json'};
     assert.equal(headers.isValid(headersObject), true);
   });
-  it ('Check invalid header', function(){
+  it ('Check invalid header in both parts', function(){
     var headersObject = {'Příliš':'žluťoučký kůň'};
     assert.equal(headers.isValid(headersObject), false);
   });
-  it ('Check invalid header', function(){
+  it ('Check invalid header value', function(){
     var headersObject = {'Content-Type':'žluťoučký kůň'};
+    assert.equal(headers.isValid(headersObject), false);
+  });
+  it ('Check invalid header name', function(){
+    var headersObject = {'Příliš':'application/json'};
     assert.equal(headers.isValid(headersObject), false);
   });
 });
