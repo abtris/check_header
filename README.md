@@ -7,14 +7,16 @@ Code is inherit from NodeJS internal functions introduced in v0.10.42, v0.12.10,
 
 ## Install
 
-    npm install check_header
-
+```sh
+npm install --save check_header
+```
 
 ## Example
 
-
-    var checker = require('check_header');
-    var headersObject = {'Content-Type':'žluťoučký kůň'};
-    if (!checker.isValid(headersObject)) {
-      console.log("Invalid header there!");
-    }
+```js
+var checker = require('check_header');
+var headersObject = {'Content-Type':'žluťoučký kůň'};
+if (!checker.isValid(headersObject)) {
+  console.log("Invalid header there!");
+}
+```
