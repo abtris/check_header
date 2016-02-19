@@ -1,6 +1,6 @@
 {
   "name": "check_header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if headers aren't invalid for correct use in setHeader or writeHead functions",
   "main": "lib/",
   "scripts": {
