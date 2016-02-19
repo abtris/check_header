@@ -1,0 +1,15 @@
+{
+  "name": "check_header",
+  "version": "1.0.0",
+  "description": "Check if headers aren't invalid for correct use in setHeader or writeHead functions",
+  "main": "lib/",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "author": "abtris",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}
