@@ -1,10 +1,17 @@
 {
   "name": "check_header",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check if headers aren't invalid for correct use in setHeader or writeHead functions",
   "main": "lib/",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abtris/check_header"
+  },
+  "bugs": {
+    "url": "https://github.com/abtris/check_header/issues"
   },
   "author": "abtris",
   "license": "MIT",
