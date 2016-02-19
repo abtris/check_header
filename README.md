@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/abtris/check_header.svg?branch=master)](https://travis-ci.org/abtris/check_header)
+
 # Check Header
 
 Code is inherit from NodeJS internal functions introduced in v0.10.42, v0.12.10, v4.3.1 and v5.6.0.
