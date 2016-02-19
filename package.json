@@ -1,6 +1,6 @@
 {
   "name": "check_header",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check if headers aren't invalid for correct use in setHeader or writeHead functions",
   "main": "lib/",
   "scripts": {
@@ -13,6 +13,12 @@
   "bugs": {
     "url": "https://github.com/abtris/check_header/issues"
   },
+  "keywords": [
+      "header",
+      "http",
+      "setHeader",
+      "writeHead"
+  ],
   "author": "abtris",
   "license": "MIT",
   "devDependencies": {
