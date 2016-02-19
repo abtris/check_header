@@ -12,6 +12,6 @@ Code is inherit from NodeJS internal functions introduced in v0.10.42, v0.12.10,
 
     var checker = require('check_header');
     var headersObject = {'Content-Type':'žluťoučký kůň'};
-    if (checker.checkHeaders(headersObject)) {
+    if (!checker.isValid(headersObject)) {
       console.log("Invalid header there!");
     }
