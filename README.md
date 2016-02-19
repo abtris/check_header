@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/check_header.svg)](https://badge.fury.io/js/check_header)
 [![Build Status](https://travis-ci.org/abtris/check_header.svg?branch=master)](https://travis-ci.org/abtris/check_header)
 
 # Check Header
