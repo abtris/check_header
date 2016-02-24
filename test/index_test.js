@@ -1,21 +1,21 @@
-var assert = require('chai').assert;
-var headers = require('../lib/headers');
+import assert from 'assert';
+import headers from '../lib/headers';
 
-describe('Test headers', function(){
-  it ('Check normal header', function(){
-    var headersObject = {'Content-Type':'application/json'};
+describe('Test headers', () => {
+  it('Check normal header', () => {
+    const headersObject = {'Content-Type': 'application/json'};
     assert.equal(headers.isValid(headersObject), true);
   });
-  it ('Check invalid header in both parts', function(){
-    var headersObject = {'Příliš':'žluťoučký kůň'};
+  it('Check invalid header in both parts', () => {
+    const headersObject = {'Příliš': 'žluťoučký kůň'};
     assert.equal(headers.isValid(headersObject), false);
   });
-  it ('Check invalid header value', function(){
-    var headersObject = {'Content-Type':'žluťoučký kůň'};
+  it('Check invalid header value', () => {
+    const headersObject = {'Content-Type': 'žluťoučký kůň'};
     assert.equal(headers.isValid(headersObject), false);
   });
-  it ('Check invalid header name', function(){
-    var headersObject = {'Příliš':'application/json'};
+  it('Check invalid header name', () => {
+    const headersObject = {'Příliš': 'application/json'};
     assert.equal(headers.isValid(headersObject), false);
   });
 });

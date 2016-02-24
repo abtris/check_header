@@ -5,9 +5,8 @@
 //  field-content  = field-vchar [ 1*( SP / HTAB ) field-vchar ]
 //  field-vchar    = VCHAR / obs-text
 function checkInvalidHeaderChar(val) {
-  val = '' + val;
-  for (var i = 0; i < val.length; i++) {
-    var ch = val.charCodeAt(i);
+  for (let i = 0; i < val.length; i++) {
+    const ch = val.charCodeAt(i);
     if (ch === 9) continue;
     if (ch <= 31 || ch > 255 || ch === 127) return true;
   }
@@ -16,27 +15,27 @@ function checkInvalidHeaderChar(val) {
 
 // Verifies that the given val is a valid HTTP token
 // per the rules defined in RFC 7230
-var token = /^[a-zA-Z0-9_!#$%&'*+.^`|~-]+$/;
+const token = /^[a-zA-Z0-9_!#$%&'*+.^`|~-]+$/;
 function checkIsHttpToken(val) {
   return typeof val === 'string' && token.test(val);
 }
 // Get object with headers and return bool
 function isValid(headers) {
-  for (var property in headers) {
+  for (const property in headers) {
     if (headers.hasOwnProperty(property)) {
-        if (checkInvalidHeaderChar(headers[property])===true) {
-          return false;
-        }
-        if (checkIsHttpToken(property)===false) {
-          return false;
-        }
+      if (checkInvalidHeaderChar(headers[property]) === true) {
+        return false;
+      }
+      if (checkIsHttpToken(property) === false) {
+        return false;
+      }
     }
-}
+  }
   return true;
 }
 
 module.exports = {
   checkInvalidHeaderChar: checkInvalidHeaderChar,
   checkIsHttpToken: checkIsHttpToken,
-  isValid: isValid
+  isValid: isValid,
 };
