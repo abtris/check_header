@@ -27,8 +27,6 @@
   "author": "abtris",
   "license": "MIT",
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*",
     "peasant": "0.5.2"
   },
   "dependencies": {
