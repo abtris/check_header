@@ -4,7 +4,12 @@
   "description": "Check if headers aren't invalid for correct use in setHeader or writeHead functions",
   "main": "lib/",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "peasant test",
+    "cover": "peasant cover",
+    "lint": "peasant lint",
+    "peasant": "peasant",
+    "ci": "peasant -s lint test build",
+    "prepublish": "npm run ci"
   },
   "repository": {
     "type": "git",
@@ -14,15 +19,19 @@
     "url": "https://github.com/abtris/check_header/issues"
   },
   "keywords": [
-      "header",
-      "http",
-      "setHeader",
-      "writeHead"
+    "header",
+    "http",
+    "setHeader",
+    "writeHead"
   ],
   "author": "abtris",
   "license": "MIT",
   "devDependencies": {
+    "chai": "*",
     "mocha": "*",
-    "chai": "*"
+    "peasant": "0.5.2"
+  },
+  "dependencies": {
+    "babel-runtime": "6.5.0"
   }
 }
