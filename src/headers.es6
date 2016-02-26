@@ -35,7 +35,7 @@ function isValid(headers) {
 }
 
 module.exports = {
-  checkInvalidHeaderChar: checkInvalidHeaderChar,
-  checkIsHttpToken: checkIsHttpToken,
-  isValid: isValid,
+  checkInvalidHeaderChar,
+  checkIsHttpToken,
+  isValid,
 };

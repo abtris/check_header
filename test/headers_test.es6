@@ -1,5 +1,5 @@
-import assert from 'assert';
 import headers from '../src/headers';
+import assert from 'assert';
 
 describe('Test headers', () => {
   it('Check normal header', () => {
