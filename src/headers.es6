@@ -1,3 +1,4 @@
+import debug from './debug';
 // From NodeJS - https://github.com/nodejs/node/commit/2a2d3e1b0333441d1bd00def06d687f807067f6e
 
 // True if val contains an invalid field-vchar
@@ -24,9 +25,11 @@ function isValid(headers) {
   for (const property in headers) {
     if (headers.hasOwnProperty(property)) {
       if (checkInvalidHeaderChar(headers[property]) === true) {
+        debug('checkInvalidHeaderChar', headers[property]);
         return false;
       }
       if (checkIsHttpToken(property) === false) {
+        debug('checkIsHttpToken', property);
         return false;
       }
     }
