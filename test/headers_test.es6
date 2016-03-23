@@ -14,6 +14,10 @@ describe('Test headers', () => {
     const headersObject = {'Content-Type': 'žluťoučký kůň'};
     assert.equal(headers.isValid(headersObject), false);
   });
+  it('Check valid header value', () => {
+    const headersObject = {'Test': 'Düsseldorf'};
+    assert.equal(headers.isValid(headersObject), true);
+  });
   it('Check invalid header name', () => {
     const headersObject = {'Příliš': 'application/json'};
     assert.equal(headers.isValid(headersObject), false);
