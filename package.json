@@ -30,7 +30,7 @@
     "peasant": "0.5.2"
   },
   "dependencies": {
-    "babel-runtime": "6.5.0",
+    "babel-runtime": "6.26.0",
     "debug": "4.3.1"
   }
 }
