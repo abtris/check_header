@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "babel-runtime": "6.26.0",
-    "debug": "4.3.2"
+    "debug": "4.3.4"
   }
 }
